@@ -13,7 +13,14 @@ const jwt = require('jsonwebtoken');
 
 
 public_router.get("/", function (req, res, next) {
-    res.json({ data: "Express waked" });
+    
+    const data = [{"category_id":"660b91f2fe6aecdd53bf6f30","category_name":"sports"},{"category_id":"660b929ffe6aecdd53bf6f31","category_name":"politics"},
+                                {"category_id":"660b9343d7ec560f4692bb9c","category_name":"advertisement"},{"category_id":"660b9c1af72936ed8a0f6cf2","category_name":"adult"},
+                                {"category_id":"660bdd7633ba047ff12db829","category_name":"social media"},{"category_id":"660cd972f5c682e6d9412b53","category_name":"malicious"},
+                                {"category_id":"660ce36cd451bcae5aee1299","category_name":"phishing"},
+                                {"category_id":"660ce691d451bcae5aee129a","category_name":"abc"},{"category_id":"660ce83ee9795bbe1024a36c","category_name":"DDoS"},
+                                {"category_id":"660e5e8bcc151cbdf9869e70","category_name":"sample"}]
+    res.json({ category : data });
   });
 
   public_router.get("/cdb", async function (req, res, next) {
